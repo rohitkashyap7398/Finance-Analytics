@@ -1,0 +1,167 @@
+.spider-network-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: #020502;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(102, 255, 0, 0.1);
+  box-shadow: inset 0 0 100px rgba(102, 255, 0, 0.05);
+  margin-top: 80px;
+}
+
+.spider-network-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(30, 60, 20, 0.5) 0%, #020502 60%);
+  z-index: 0;
+}
+
+.network-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.spider-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spider-body {
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle at 30% 30%, #444, #111, #000);
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.9), 
+    inset 0 0 20px rgba(102, 255, 0, 0.3),
+    inset -10px -10px 20px rgba(0,0,0,0.8);
+  border: 2px solid #222;
+  z-index: 2;
+}
+
+.spider-glow {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: rgba(102, 255, 0, 0.15);
+  border-radius: 50%;
+  filter: blur(30px);
+  z-index: 1;
+  animation: pulse-glow 2s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.1); opacity: 1; }
+}
+
+.spider-eye {
+  position: absolute;
+  background: #66FF00;
+  border-radius: 50%;
+  box-shadow: 0 0 15px 2px #66FF00, inset 0 0 5px #fff;
+}
+.eye-1 { top: 30px; left: 35px; width: 18px; height: 18px; }
+.eye-2 { top: 30px; right: 35px; width: 18px; height: 18px; }
+.eye-3 { top: 65px; left: 25px; width: 14px; height: 14px; }
+.eye-4 { top: 65px; right: 25px; width: 14px; height: 14px; }
+.eye-5 { top: 95px; left: 50px; width: 10px; height: 10px; }
+.eye-6 { top: 95px; right: 50px; width: 10px; height: 10px; }
+
+/* Mechanical Legs */
+.spider-legs {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.leg {
+  position: absolute;
+  width: 140px;
+  height: 8px;
+  background: linear-gradient(90deg, #111, #333, #111);
+  border-radius: 4px;
+  top: 50%;
+  transform-origin: 0% 50%;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.8);
+}
+.leg-l1 { left: 50%; transform: rotate(160deg) translateY(-20px); }
+.leg-l2 { left: 50%; transform: rotate(190deg); }
+.leg-l3 { left: 50%; transform: rotate(220deg) translateY(20px); }
+.leg-r1 { left: 50%; transform: rotate(20deg) translateY(-20px); }
+.leg-r2 { left: 50%; transform: rotate(-10deg); }
+.leg-r3 { left: 50%; transform: rotate(-40deg) translateY(20px); }
+
+.spider-text-label {
+  position: absolute;
+  top: -40px;
+  right: -100px;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+/* 3D Isometric Nodes */
+.network-node {
+  position: absolute;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+}
+
+.node-tile {
+  width: 120px;
+  height: 120px;
+  background: rgba(102, 255, 0, 0.05);
+  border: 2px solid rgba(102, 255, 0, 0.4);
+  box-shadow: 
+    0 0 20px rgba(102, 255, 0, 0.1), 
+    inset 0 0 30px rgba(102, 255, 0, 0.15),
+    0 10px 0 rgba(102, 255, 0, 0.2);
+  border-radius: 12px;
+  transform: perspective(800px) rotateX(60deg) rotateZ(-45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.node-tile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(102,255,0,0.2) 0%, transparent 70%);
+  border-radius: 10px;
+}
+
+.node-tile:hover {
+  background: rgba(102, 255, 0, 0.15);
+  box-shadow: 
+    0 0 40px rgba(102, 255, 0, 0.4), 
+    inset 0 0 40px rgba(102, 255, 0, 0.3),
+    0 10px 0 rgba(102, 255, 0, 0.4);
+  transform: perspective(800px) rotateX(60deg) rotateZ(-45deg) translateZ(10px);
+}
+
+.node-label {
+  transform: rotateZ(45deg) rotateX(-10deg);
+  color: #66FF00;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px #66FF00;
+  position: relative;
+  z-index: 2;
+}
