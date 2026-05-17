@@ -66,7 +66,7 @@ function Features() {
           <h2 style={{ fontSize: '3rem', color: '#fff' }}>Core <span style={{ color: '#d4ff00' }}>Features</span></h2>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '40px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))', gap: '40px' }}>
           {features.map((feat, i) => (
             <motion.div 
               key={i} 

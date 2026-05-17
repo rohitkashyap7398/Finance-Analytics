@@ -38,7 +38,7 @@ function Pricing() {
              {/* Text */}
              <div style={{ marginBottom: '60px', position: 'relative' }}>
                <h3 style={{ fontSize: '1.5rem', color: '#fff', fontWeight: '600', marginBottom: '-15px', zIndex: 2, position: 'relative' }}>For any</h3>
-               <h1 style={{ fontSize: '6rem', fontWeight: '900', color: '#FFD700', lineHeight: '0.9', textShadow: '0 10px 30px rgba(255,215,0,0.3)', zIndex: 1, position: 'relative', letterSpacing: '-2px' }}>
+               <h1 className="pricing-hero-title">
                  Finance<br/>Analytics
                </h1>
                <div style={{ background: '#222', color: '#fff', padding: '6px 20px', borderRadius: '12px', display: 'inline-block', marginTop: '15px', fontWeight: 'bold', border: '1px solid #444' }}>Service,</div>
@@ -51,7 +51,7 @@ function Pricing() {
              </svg>
 
              {/* Monitor Mockup */}
-             <div style={{ width: '85%', maxWidth: '800px', height: '400px', background: '#000', borderRadius: '16px', border: '12px solid #1a1a1a', borderBottomWidth: '30px', position: 'relative', overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,0.8)' }}>
+             <div className="pricing-monitor">
                 {/* Monitor Content */}
                 <div style={{ width: '100%', height: '100%', background: '#fff', display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'relative' }}>
                    {/* Software UI Mockup elements */}
@@ -60,7 +60,7 @@ function Pricing() {
                    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '30px', background: '#111' }}></div>
                    
                    <div style={{ textAlign: 'center', color: '#000', zIndex: 5 }}>
-                     <h2 style={{ fontSize: '4rem', fontWeight: '900', color: '#FFD700', lineHeight: '0.9' }}>Reach<br/>Out</h2>
+                     <h2 className="pricing-monitor-title">Reach<br/>Out</h2>
                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '20px', background: '#000', padding: '10px', borderRadius: '30px', color: '#fff' }}>
                         <div style={{ background: '#FFD700', color: '#000', padding: '5px 15px', borderRadius: '20px', fontWeight: 'bold' }}>To us today For</div>
                         <div style={{ fontWeight: 'bold', paddingRight: '10px' }}>Creative Designs</div>
@@ -74,16 +74,16 @@ function Pricing() {
           </div>
 
           {/* Bottom Contact Bar */}
-          <div style={{ width: '100%', background: '#0a0a0a', padding: '30px 60px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '2px solid #222' }}>
-             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#FFD700', border: '1px solid #FFD700', padding: '12px 24px', borderRadius: '8px' }}>
+          <div className="contact-bar">
+             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#FFD700', border: '1px solid #FFD700', padding: '12px 24px', borderRadius: '8px', width: '100%', justifyContent: 'center' }}>
                 <Phone size={24} /> <span style={{ color: '#fff', fontWeight: 'bold', fontSize: '1.125rem' }}>07082720234</span>
              </div>
              <div style={{ background: '#fff', padding: '8px', borderRadius: '8px' }}>
                 <QrCode size={50} color="#000" />
              </div>
-             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#FFD700', border: '1px solid #FFD700', padding: '12px 24px', borderRadius: '8px' }}>
+             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', color: '#FFD700', border: '1px solid #FFD700', padding: '12px 24px', borderRadius: '8px', width: '100%', justifyContent: 'center' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                <span style={{ color: '#fff', fontWeight: 'bold', fontSize: '1.125rem' }}>FinanceAnalytics_01</span>
+                <span style={{ color: '#fff', fontWeight: 'bold', fontSize: '1.125rem', whiteSpace: 'nowrap' }}>FinanceAnalytics_01</span>
              </div>
           </div>
         </motion.div>

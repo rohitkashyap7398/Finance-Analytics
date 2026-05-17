@@ -24,10 +24,10 @@ function Home() {
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 16px', borderRadius: '30px', background: 'rgba(255,95,31,0.1)', border: '1px solid rgba(255,95,31,0.3)', color: '#FF5F1F', fontSize: '0.875rem', fontWeight: '500', marginBottom: '24px' }}>
               Finance Solution in One Platform <ArrowRight size={14} />
             </div>
-            <h1 className="hero-title" style={{ fontSize: '4.5rem', lineHeight: '1.1', marginBottom: '24px', letterSpacing: '-1px' }}>
+            <h1 className="hero-title">
               Unlock The Power <br/>Of Finance Analytics
             </h1>
-            <p className="hero-subtitle" style={{ fontSize: '1.125rem', color: 'rgba(255,255,255,0.6)', maxWidth: '600px', margin: '0 0 40px 0', textAlign: 'left' }}>
+            <p className="hero-subtitle">
               Gain deep insights into your financial data and make smarter decisions. Turn numbers into strategies that drive growth and efficiency.
             </p>
             
@@ -122,7 +122,7 @@ function Home() {
                   </div>
                   
                   {/* Bottom Area */}
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: '16px' }}>
+                  <div className="bottom-mockup-grid">
                     <div className="glass-panel" style={{ padding: '24px', background: 'rgba(255,255,255,0.03)' }}>
                        <h4 style={{ fontSize: '1.125rem', marginBottom: '8px' }}>My Wallet</h4>
                        <p style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.5)', marginBottom: '24px' }}>Today 1 USD = 122.30 BDT</p>
@@ -168,10 +168,10 @@ function Home() {
           
           {/* Typography from Image */}
           <div style={{ textAlign: 'center', zIndex: 20, marginBottom: '20px' }}>
-            <h2 style={{ fontSize: '4.5rem', fontWeight: '800', lineHeight: '1', color: '#fff', letterSpacing: '-2px' }}>
-              <span style={{ color: '#888', fontWeight: '300' }}>Great</span> <span style={{ background: '#d4ff00', color: '#050505', padding: '0 10px' }}>design</span><br/>
+            <h2 className="typography-h2">
+              <span className="typography-span">Great</span> <span style={{ background: '#d4ff00', color: '#050505', padding: '0 10px' }}>design</span><br/>
               speaks <span style={{ color: '#fff' }}>louder</span><br/>
-              <span style={{ fontSize: '2.5rem', fontWeight: '300', color: '#888' }}>than words</span>
+              <span className="typography-span">than words</span>
             </h2>
           </div>
 

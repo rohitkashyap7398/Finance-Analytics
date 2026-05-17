@@ -1,0 +1,156 @@
+.custom-navbar {
+  background: transparent !important;
+  border: none !important;
+  padding-top: 24px !important;
+}
+
+.responsive-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.custom-logo {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 60;
+}
+
+.logo-icon-bg {
+  background: linear-gradient(135deg, #FF5F1F, #FF2A00);
+  padding: 6px;
+  border-radius: 8px;
+  display: flex;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 60;
+}
+
+.nav-menu {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.center-pill {
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px 16px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.pill-link {
+  color: rgba(255, 255, 255, 0.6);
+  padding: 6px 16px;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.pill-link:hover, .pill-link.active {
+  color: #FF5F1F;
+  background: rgba(255, 95, 31, 0.15);
+  font-weight: 500;
+}
+
+.right-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.discord-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.discord-link:hover {
+  color: white;
+}
+
+.nav-signup-btn {
+  padding: 8px 24px;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 1024px) {
+  .nav-menu {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .custom-navbar {
+    background: rgba(10, 10, 10, 0.95) !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 10, 10, 0.98);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 40px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+    z-index: 50;
+  }
+
+  .nav-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .center-pill {
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    padding: 0;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .pill-link {
+    font-size: 1.5rem;
+  }
+
+  .right-actions {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
