@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+.p-container {
+  background: linear-gradient(135deg, #421d30 0%, #240d1a 100%);
+  min-height: 100vh;
+  padding: 2rem 0 0 0;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-wrapper {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+}
+
+/* Topbar */
+.p-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.p-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.p-nav {
+  display: flex;
+  gap: 2.5rem;
+}
+.p-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.p-nav a:hover {
+  opacity: 1;
+}
+
+.p-actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.p-search {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  color: rgba(255,255,255,0.6);
+}
+.p-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 120px;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+}
+.p-search input::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.p-cart-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+/* Hero Section */
+.p-hero {
+  display: flex;
+  min-height: 480px;
+  position: relative;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  background: linear-gradient(135deg, rgba(121, 62, 94, 0.4) 0%, rgba(121, 62, 94, 0) 100%);
+  margin-bottom: 4rem;
+}
+
+.p-hero-left {
+  width: 50%;
+  padding: 4rem 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.p-hero-text-box {
+  margin-bottom: 2.5rem;
+}
+
+.p-title-light {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.p-title-green {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0;
+  color: #c2e09c;
+  font-style: italic;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.p-hero-desc {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  max-width: 320px;
+}
+.p-desc-line {
+  width: 2px;
+  background-color: rgba(255,255,255,0.4);
+}
+.p-hero-desc p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.p-hero-stats {
+  display: flex;
+  gap: 3rem;
+}
+.p-hero-stats h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem 0;
+  color: #c2e09c;
+}
+.p-hero-stats span {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.p-hero-right {
+  width: 50%;
+  position: relative;
+}
+
+.p-hero-image-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 200px;
+  overflow: hidden;
+  box-shadow: -15px 15px 30px rgba(0,0,0,0.4);
+}
+
+.p-hero-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.p-shop-now-circle {
+  position: absolute;
+  bottom: 60px;
+  left: -45px;
+  width: 90px;
+  height: 90px;
+  background: rgba(45, 20, 32, 0.75);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #c2e09c;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  z-index: 3;
+  cursor: pointer;
+}
+
+/* Products */
+.p-products-section {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.p-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #c2e09c;
+  margin-bottom: 3.5rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.p-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.p-product-card {
+  background-color: #723b56;
+  border-radius: 35px;
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.p-product-card:hover {
+  transform: translateY(-8px);
+}
+
+.p-product-img-wrapper {
+  width: 120px;
+  height: 150px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-product-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 15px rgba(0,0,0,0.5));
+  border-radius: 10px;
+}
+
+.p-product-name {
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.p-product-price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #c2e09c;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Reviews */
+.p-reviews-section {
+  width: 100%;
+  background-color: #1a0a13;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 2.5rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.p-reviews-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #c2e09c;
+  margin: 0;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .p-hero { flex-direction: column; border-radius: 30px; margin-bottom: 2rem; min-height: auto; }
+  .p-hero-left, .p-hero-right { width: 100%; padding: 2rem; }
+  .p-hero-right { height: 350px; padding: 0; }
+  .p-hero-image-container { position: relative; height: 100%; border-radius: 0 0 30px 30px; }
+  .p-shop-now-circle { bottom: -20px; left: 50%; transform: translateX(-50%); }
+  .p-title-light, .p-title-green { font-size: 2.5rem; }
+  .p-product-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .p-nav { display: none; }
+  .p-topbar { flex-direction: column; gap: 1rem; }
+  .p-search { width: 100%; justify-content: space-between; }
+  .p-container { padding: 1rem; min-height: 100vh; overflow: visible; display: block; }
+  .p-wrapper { padding: 0; margin: 0 auto; }
+}

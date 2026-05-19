@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.scooter-container {
+  background-color: #d1d4d8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.scooter-wrapper {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.scooter-screen {
+  width: 340px;
+  height: 700px;
+  background-color: #8c8f94;
+  border-radius: 40px;
+  padding: 1.8rem;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.15), -10px -10px 30px rgba(255,255,255,0.6);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+.scooter-screen:hover {
+  transform: translateY(-15px);
+  box-shadow: 25px 30px 60px rgba(0,0,0,0.2), -10px -10px 30px rgba(255,255,255,0.6);
+}
+
+.sc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.sc-icon-btn {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  border: 1.5px solid rgba(248, 152, 81, 0.4);
+  background: transparent;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.sc-icon-btn:hover {
+  background: #f89851;
+  border-color: #f89851;
+  transform: scale(1.05);
+}
+
+.sc-main-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.sc-main-img img {
+  width: 125%;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 25px rgba(0,0,0,0.4));
+  transition: transform 0.5s ease;
+}
+.sc-main-img img:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.sc-dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+}
+.sc-dots .dot {
+  width: 6px; height: 6px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.sc-dots .dot.active {
+  width: 20px;
+  background: #f89851;
+  border-radius: 10px;
+}
+.sc-dots .dot:hover { background: #fff; }
+
+.sc-info {
+  background: transparent;
+}
+.sc-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+.sc-title-row h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+.sc-price {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.sc-info p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 1.5rem;
+}
+
+.sc-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.sc-colors {
+  display: flex;
+  gap: 12px;
+}
+.sc-color {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.sc-grey { background: #666; }
+.sc-white { background: #e0e0e0; }
+.sc-color.active { border: 2px solid #f89851; padding: 2px; background-clip: content-box; }
+.sc-color:hover { transform: scale(1.1); }
+
+.sc-qty {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.1);
+  padding: 0.4rem 0.6rem;
+  border-radius: 20px;
+}
+.sc-qty button {
+  background: transparent; border: 1px solid rgba(255,255,255,0.4); color: #fff;
+  border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: 0.2s;
+}
+.sc-qty button:hover { background: rgba(255,255,255,0.3); }
+.sc-qty span { font-size: 0.85rem; font-weight: 600; }
+
+.sc-actions {
+  display: flex;
+  gap: 1rem;
+}
+.sc-heart-btn {
+  width: 52px; height: 52px;
+  border-radius: 16px;
+  background: transparent; border: 1.5px solid rgba(255,255,255,0.3);
+  color: #fff; display: flex; justify-content: center; align-items: center;
+  cursor: pointer; transition: 0.3s;
+}
+.sc-heart-btn:hover { background: #f89851; border-color: #f89851; transform: scale(1.05); }
+
+.sc-add-btn {
+  flex: 1;
+  background: #f89851;
+  color: #fff; border: none; border-radius: 16px;
+  font-weight: 600; font-size: 0.95rem; cursor: pointer;
+  transition: 0.3s; box-shadow: 0 5px 15px rgba(248,152,81,0.3);
+}
+.sc-add-btn:hover { filter: brightness(1.1); transform: scale(1.02); }
+.sc-add-btn:active { transform: scale(0.95); }
+
+/* Screen 2 */
+.sc-dots-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px;
+  cursor: pointer;
+}
+.dot-g { width: 5px; height: 5px; background: #fff; border-radius: 50%; transition: 0.2s;}
+.sc-dots-grid:hover .dot-g { background: #f89851; }
+
+.sc-stats-bar {
+  display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; width: 65px;
+}
+.sc-stat {
+  background: rgba(255,255,255,0.12); border-radius: 16px; padding: 1.2rem 0;
+  display: flex; flex-direction: column; align-items: center; color: rgba(255,255,255,0.7);
+  cursor: pointer; transition: 0.3s;
+}
+.sc-stat.active, .sc-stat:hover {
+  background: #f89851; color: #fff; transform: translateX(5px);
+  box-shadow: 0 5px 15px rgba(248,152,81,0.3);
+}
+.sc-stat-icon { font-size: 1.3rem; margin-bottom: 0.5rem; }
+.sc-stat strong { font-size: 1.2rem; color: #fff; line-height: 1.2; }
+.sc-stat span { font-size: 0.75rem; }
+
+.sc-folding-view {
+  position: absolute;
+  top: 40%; left: 60px; width: 100%;
+}
+.main-fold {
+  width: 110%; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.4));
+  transition: transform 0.5s ease; cursor: pointer;
+}
+.main-fold:hover { transform: rotate(-5deg) translateY(-10px); }
+
+.sc-orbit-control {
+  position: absolute; bottom: 90px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+}
+.orbit-track {
+  width: 160px; height: 3px; background: rgba(255,255,255,0.4); border-radius: 2px; position: relative;
+  cursor: pointer;
+}
+.orbit-thumb {
+  width: 14px; height: 14px; background: #fff; border-radius: 50%; position: absolute; top: -5.5px; left: 20%;
+  transition: left 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.orbit-track:hover .orbit-thumb { left: 80%; background: #f89851; }
+.sc-orbit-control span { font-size: 0.8rem; color: rgba(255,255,255,0.8); font-weight: 500; }
+
+.sc-bottom-right {
+  position: absolute; bottom: 25px; right: 25px;
+}
+.sc-download-btn {
+  width: 52px; height: 52px; background: #f89851; border-radius: 16px; border: none; color: #fff;
+  display: flex; justify-content: center; align-items: center; cursor: pointer; transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(248,152,81,0.4);
+}
+.sc-download-btn:hover { transform: scale(1.1); }
+
+/* Screen 3 */
+.sc-screen-3 {
+  background: #a3a6aa; padding: 0; position: relative;
+}
+.sc-screen-3 .sc-header {
+  position: absolute; width: 100%; padding: 1.8rem;
+}
+.sc-handlebar-img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 5s ease;
+}
+.sc-screen-3:hover .sc-handlebar-img {
+  transform: scale(1.1);
+}
+
+.sc-control-panel-card {
+  position: absolute; bottom: 0; left: 0; width: 100%;
+  background: #fff; color: #333; border-top-left-radius: 35px; border-top-right-radius: 35px;
+  padding: 2.5rem 2.5rem 4rem 2.5rem; box-shadow: 0 -15px 40px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+.sc-control-panel-card:hover {
+  transform: translateY(-15px);
+}
+.sc-handle-bar {
+  width: 50px; height: 6px; background: #e0e0e0; border-radius: 3px; margin: 0 auto 1.5rem auto;
+}
+.sc-control-panel-card h3 {
+  margin: 0 0 1rem 0; font-size: 1.3rem; font-weight: 700;
+}
+.sc-control-panel-card p {
+  font-size: 0.85rem; color: #666; line-height: 1.7; margin: 0;
+}
+.sc-tune-btn {
+  position: absolute; bottom: 35px; right: 25px;
+  width: 56px; height: 56px; background: #f89851; border: none; border-radius: 16px;
+  color: #fff; font-weight: bold; cursor: pointer; box-shadow: 0 8px 20px rgba(248,152,81,0.4);
+  font-size: 1.2rem; transition: 0.3s;
+}
+.sc-tune-btn:hover { transform: rotate(90deg) scale(1.1); }
+
+@media (max-width: 900px) {
+  .scooter-wrapper { flex-direction: column; align-items: center; width: 100%; gap: 2rem; }
+  .scooter-screen { width: 100%; max-width: 380px; height: 750px; margin-bottom: 0; }
+  .sc-folding-view { left: 0; text-align: center; }
+  .main-fold { width: 90%; }
+  .sc-orbit-control { bottom: 20px; }
+  .scooter-container { padding: 1rem; min-height: 100vh; overflow: visible; display: flex; flex-direction: column; }
+  .sc-main-img img { width: 100%; }
+}

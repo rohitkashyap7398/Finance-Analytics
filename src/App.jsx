@@ -30,8 +30,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Home />} />
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Home />} />
+
           <Route path="/features" element={<Features />} />
           <Route path="/platform" element={<Platform />} />
           <Route path="/pricing" element={<Pricing />} />
